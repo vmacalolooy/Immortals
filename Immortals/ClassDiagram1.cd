@@ -1,0 +1,257 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Immortals.Properties.Resources" Collapsed="true">
+    <Position X="6" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAkFAAAIBAAMQAAAgABEAAAgQAAAAMAAAAAAQABEIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.AdminDashboard">
+    <Position X="6.75" Y="0.5" Width="2.75" />
+    <Members>
+      <Field Name="adminsignoutBtn" Hidden="true" />
+      <Field Name="admintopupBtn" Hidden="true" />
+      <Field Name="analyticsBtn" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="salesreportBtn" Hidden="true" />
+      <Field Name="searchBtn" Hidden="true" />
+      <Field Name="searchTbx" Hidden="true" />
+      <Field Name="topuphistoryDgv" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EAAgAgAAACAAABAAAACkAQQaAAAABAiAAEQAIABQBAA=</HashCode>
+      <FileName>AdminDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.AdminTopup">
+    <Position X="6.75" Y="4.5" Width="2" />
+    <Members>
+      <Field Name="amountTbx" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="submittopupBtn" Hidden="true" />
+      <Field Name="UserTopPanel" Hidden="true" />
+      <Field Name="usertopupTbx" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAACAAABAAgACAAQACAAIAAAAAAAAAAABAAgA=</HashCode>
+      <FileName>AdminTopup.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.Dashboard">
+    <Position X="10.25" Y="0.5" Width="2.75" />
+    <Members>
+      <Field Name="accountdetailsBtn" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="DelayTimer" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="labelTime" Hidden="true" />
+      <Field Name="labelUsername" Hidden="true" />
+      <Field Name="mainPanel" Hidden="true" />
+      <Field Name="memberplayBtn" Hidden="true" />
+      <Field Name="membersignoutBtn" Hidden="true" />
+      <Field Name="OldPassTbx" Hidden="true" />
+      <Field Name="pictureBox3" Hidden="true" />
+      <Field Name="processLabel" Hidden="true" />
+      <Field Name="seconds" Hidden="true" />
+      <Field Name="ShowHidePassCbx" Hidden="true" />
+      <Field Name="submittopupBtn" Hidden="true" />
+      <Field Name="successLabel" Hidden="true" />
+      <Field Name="textBox1" Hidden="true" />
+      <Field Name="timer1" Hidden="true" />
+      <Field Name="topupBtn" Hidden="true" />
+      <Field Name="UpdateAccInfoBtn" Hidden="true" />
+      <Field Name="UpdateConfirmPassTbx" Hidden="true" />
+      <Field Name="UpdateNewPassTbx" Hidden="true" />
+      <Field Name="UpdateUsernameTbx" Hidden="true" />
+      <Field Name="UserAccountLabel" Hidden="true" />
+      <Field Name="UserAccPanel" Hidden="true" />
+      <Field Name="UserConPassTbx" Hidden="true" />
+      <Field Name="UserDeleteBtn" Hidden="true" />
+      <Field Name="UserPassTbx" Hidden="true" />
+      <Field Name="UserTopPanel" Hidden="true" />
+      <Field Name="usertopupTbx" Hidden="true" />
+      <Field Name="viewHistoryBtn" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>EMRBPBQAEnAAUFDghACREQACBgIA4AAIGAIYAAQQQwA=</HashCode>
+      <FileName>Dashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.Dota" Collapsed="true">
+    <Position X="0.75" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.Form1">
+    <Position X="0.5" Y="2" Width="2.25" />
+    <Members>
+      <Field Name="beamemberBtn" Hidden="true" />
+      <Field Name="button1" Hidden="true" />
+      <Field Name="button4" Hidden="true" />
+      <Field Name="button5" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="labelInvalidLogin" Hidden="true" />
+      <Field Name="loginBtn" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel5" Hidden="true" />
+      <Field Name="panel6" Hidden="true" />
+      <Field Name="panel7" Hidden="true" />
+      <Field Name="panel8" Hidden="true" />
+      <Field Name="panel9" Hidden="true" />
+      <Field Name="passwordTbx" Hidden="true" />
+      <Field Name="pictureBox1" Hidden="true" />
+      <Field Name="playGuestBtn" Hidden="true" />
+      <Field Name="usernameTbx" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAgAAAEACAAAFUCAQGACQASIMQIACQEAEQOgUBAAAA=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.Fornite" Collapsed="true">
+    <Position X="2.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.GamesMenu">
+    <Position X="16.5" Y="0.5" Width="2.25" />
+    <Members>
+      <Field Name="chromeBtn" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="csBtn" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Field Name="dotaBtn" Hidden="true" />
+      <Field Name="forniteBtn" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="lolBtn" Hidden="true" />
+      <Field Name="valorantBtn" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAYCAKAEgABgCIAAECAICACAAgABAAAABACgg=</HashCode>
+      <FileName>GamesMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.GuestDashboard">
+    <Position X="14" Y="0.5" Width="2" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+      <Field Name="labelGuest" Hidden="true" />
+      <Field Name="labelGuestID" Hidden="true" />
+      <Field Name="labelTime" Hidden="true" />
+      <Field Name="playBtn" Hidden="true" />
+      <Field Name="signoutBtn" Hidden="true" />
+      <Field Name="submittopupBtn" Hidden="true" />
+      <Field Name="timer1" Hidden="true" />
+      <Field Name="topupBtn" Hidden="true" />
+      <Field Name="UserTopPanel" Hidden="true" />
+      <Field Name="usertopupTbx" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAREAAAAACAAQBiABACAAIACAAKAoCAAAAAAAAAQAgE=</HashCode>
+      <FileName>GuestDashboard.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.Program">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.RegistrationForm">
+    <Position X="3.75" Y="0.5" Width="2.5" />
+    <Members>
+      <Field Name="backtologinBtn" Hidden="true" />
+      <Field Name="button41" Hidden="true" />
+      <Field Name="button42" Hidden="true" />
+      <Field Name="button51" Hidden="true" />
+      <Field Name="button52" Hidden="true" />
+      <Field Name="components" Hidden="true" />
+      <Field Name="confirmpasswordTbx" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label1" Hidden="true" />
+      <Field Name="label2" Hidden="true" />
+      <Field Name="label3" Hidden="true" />
+      <Field Name="label4" Hidden="true" />
+      <Field Name="label5" Hidden="true" />
+      <Field Name="label6" Hidden="true" />
+      <Field Name="label71" Hidden="true" />
+      <Field Name="labelSuccess" Hidden="true" />
+      <Field Name="labelUserExist" Hidden="true" />
+      <Field Name="newpasswordTbx" Hidden="true" />
+      <Field Name="newusernameTbx" Hidden="true" />
+      <Field Name="panel1" Hidden="true" />
+      <Field Name="panel10" Hidden="true" />
+      <Field Name="panel111" Hidden="true" />
+      <Field Name="panel12" Hidden="true" />
+      <Field Name="panel13" Hidden="true" />
+      <Field Name="panel2" Hidden="true" />
+      <Field Name="panel3" Hidden="true" />
+      <Field Name="panel4" Hidden="true" />
+      <Field Name="panel51" Hidden="true" />
+      <Field Name="panel6" Hidden="true" />
+      <Field Name="panel71" Hidden="true" />
+      <Field Name="panel8" Hidden="true" />
+      <Field Name="panel9" Hidden="true" />
+      <Field Name="pictureBox2" Hidden="true" />
+      <Field Name="registerBtn" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>LAAgAExAFCAACBwBAACYAUACEAAAAIADEABiAwAPgAA=</HashCode>
+      <FileName>RegistrationForm.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.UserTopupHistory">
+    <Position X="10.25" Y="6.75" Width="2" />
+    <Members>
+      <Field Name="components" Hidden="true" />
+      <Field Name="dataGridView" Hidden="true" />
+      <Method Name="Dispose" Hidden="true" />
+      <Method Name="InitializeComponent" Hidden="true" />
+      <Field Name="label7" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAFAAAACAAAECAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>UserTopupHistory.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Immortals.Valorant" Collapsed="true">
+    <Position X="4.25" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
