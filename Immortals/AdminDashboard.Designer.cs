@@ -28,6 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             adminsignoutBtn = new Button();
             admintopupBtn = new Button();
             salesreportBtn = new Button();
@@ -46,7 +49,7 @@
             adminsignoutBtn.Cursor = Cursors.Hand;
             adminsignoutBtn.FlatAppearance.BorderSize = 0;
             adminsignoutBtn.FlatStyle = FlatStyle.Flat;
-            adminsignoutBtn.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            adminsignoutBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             adminsignoutBtn.ForeColor = Color.White;
             adminsignoutBtn.Location = new Point(126, 595);
             adminsignoutBtn.Name = "adminsignoutBtn";
@@ -63,7 +66,7 @@
             admintopupBtn.Cursor = Cursors.Hand;
             admintopupBtn.FlatAppearance.BorderSize = 0;
             admintopupBtn.FlatStyle = FlatStyle.Flat;
-            admintopupBtn.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            admintopupBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             admintopupBtn.ForeColor = Color.White;
             admintopupBtn.Location = new Point(126, 358);
             admintopupBtn.Name = "admintopupBtn";
@@ -80,7 +83,7 @@
             salesreportBtn.Cursor = Cursors.Hand;
             salesreportBtn.FlatAppearance.BorderSize = 0;
             salesreportBtn.FlatStyle = FlatStyle.Flat;
-            salesreportBtn.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            salesreportBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             salesreportBtn.ForeColor = Color.White;
             salesreportBtn.Location = new Point(126, 437);
             salesreportBtn.Name = "salesreportBtn";
@@ -97,7 +100,7 @@
             analyticsBtn.Cursor = Cursors.Hand;
             analyticsBtn.FlatAppearance.BorderSize = 0;
             analyticsBtn.FlatStyle = FlatStyle.Flat;
-            analyticsBtn.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            analyticsBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             analyticsBtn.ForeColor = Color.White;
             analyticsBtn.Location = new Point(126, 522);
             analyticsBtn.Name = "analyticsBtn";
@@ -110,20 +113,48 @@
             // 
             // topuphistoryDgv
             // 
+            topuphistoryDgv.AllowUserToAddRows = false;
+            topuphistoryDgv.AllowUserToDeleteRows = false;
+            topuphistoryDgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            topuphistoryDgv.BackgroundColor = Color.SlateBlue;
+            topuphistoryDgv.BorderStyle = BorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(192, 192, 255);
+            dataGridViewCellStyle1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            topuphistoryDgv.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             topuphistoryDgv.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = Color.Plum;
+            dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            dataGridViewCellStyle2.ForeColor = SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.False;
+            topuphistoryDgv.DefaultCellStyle = dataGridViewCellStyle2;
+            topuphistoryDgv.EnableHeadersVisualStyles = false;
+            topuphistoryDgv.GridColor = Color.Fuchsia;
             topuphistoryDgv.Location = new Point(506, 77);
             topuphistoryDgv.Name = "topuphistoryDgv";
+            topuphistoryDgv.ReadOnly = true;
+            topuphistoryDgv.RowHeadersVisible = false;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(255, 128, 255);
+            topuphistoryDgv.RowsDefaultCellStyle = dataGridViewCellStyle3;
             topuphistoryDgv.RowTemplate.Height = 25;
+            topuphistoryDgv.ScrollBars = ScrollBars.Vertical;
             topuphistoryDgv.Size = new Size(710, 584);
             topuphistoryDgv.TabIndex = 3;
             // 
             // searchTbx
             // 
             searchTbx.BackColor = Color.FromArgb(218, 244, 251);
-            searchTbx.Font = new Font("Rockwell", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            searchTbx.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
             searchTbx.Location = new Point(506, 694);
             searchTbx.Name = "searchTbx";
-            searchTbx.Size = new Size(247, 30);
+            searchTbx.Size = new Size(247, 29);
             searchTbx.TabIndex = 4;
             // 
             // searchBtn
@@ -133,7 +164,7 @@
             searchBtn.FlatAppearance.BorderSize = 2;
             searchBtn.FlatAppearance.MouseOverBackColor = Color.SlateBlue;
             searchBtn.FlatStyle = FlatStyle.Flat;
-            searchBtn.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            searchBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             searchBtn.ForeColor = SystemColors.ButtonHighlight;
             searchBtn.Location = new Point(1064, 694);
             searchBtn.Name = "searchBtn";
@@ -148,11 +179,11 @@
             label7.AutoSize = true;
             label7.BackColor = Color.Transparent;
             label7.FlatStyle = FlatStyle.Flat;
-            label7.Font = new Font("Rockwell", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label7.Font = new Font("Microsoft Sans Serif", 26.25F, FontStyle.Regular, GraphicsUnit.Point);
             label7.ForeColor = Color.White;
             label7.Location = new Point(727, 21);
             label7.Name = "label7";
-            label7.Size = new Size(259, 39);
+            label7.Size = new Size(245, 39);
             label7.TabIndex = 9;
             label7.Text = "Top-up History";
             // 
@@ -161,11 +192,11 @@
             label1.AutoSize = true;
             label1.BackColor = Color.Transparent;
             label1.FlatStyle = FlatStyle.Flat;
-            label1.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(506, 672);
             label1.Name = "label1";
-            label1.Size = new Size(167, 19);
+            label1.Size = new Size(162, 20);
             label1.TabIndex = 10;
             label1.Text = "Search by Username:";
             // 

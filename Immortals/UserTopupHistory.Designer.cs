@@ -38,10 +38,13 @@
             // 
             // dataGridView
             // 
+            dataGridView.AllowUserToAddRows = false;
+            dataGridView.AllowUserToDeleteRows = false;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(255, 192, 255);
             dataGridView.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             dataGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView.BackgroundColor = Color.MediumSlateBlue;
+            dataGridView.BorderStyle = BorderStyle.None;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = Color.Fuchsia;
             dataGridViewCellStyle2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
@@ -59,11 +62,15 @@
             dataGridViewCellStyle3.SelectionForeColor = SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.False;
             dataGridView.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridView.EnableHeadersVisualStyles = false;
             dataGridView.GridColor = Color.Fuchsia;
             dataGridView.Location = new Point(15, 70);
             dataGridView.Name = "dataGridView";
+            dataGridView.ReadOnly = true;
+            dataGridView.RowHeadersVisible = false;
             dataGridView.RowTemplate.DefaultCellStyle.BackColor = Color.Plum;
             dataGridView.RowTemplate.Height = 25;
+            dataGridView.ScrollBars = ScrollBars.Vertical;
             dataGridView.Size = new Size(397, 493);
             dataGridView.TabIndex = 0;
             // 

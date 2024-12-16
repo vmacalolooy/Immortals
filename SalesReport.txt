@@ -1,0 +1,6 @@
+Sales Report
+Date: December 16, 2024 16:36:47
+
+Total sales for year 2024: P787
+Total sales for the month of December: P787
+Total sales today: P-11

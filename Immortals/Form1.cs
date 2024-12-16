@@ -38,7 +38,7 @@ namespace Immortals
             con.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e) //Username Textbox
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
             try
             {

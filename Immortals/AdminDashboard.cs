@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Data;
 using System.Data.OleDb;
+using System.Drawing.Printing;
+using System.Windows.Forms.DataVisualization.Charting;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Immortals
@@ -75,9 +78,22 @@ namespace Immortals
                 query = $"SELECT SUM(TopupAmount) FROM TopupHistory WHERE TopupDate >= #{currentDayStart}#";
                 int totalSalesDay = ExecuteScalarIntQuery(query);
 
-                MessageBox.Show($"Total sales for year {currentDate.Year} : P{totalSalesYear}\n" +
-                                $"Total sales for month of {currentDate.ToString("MMMM")} : P{totalSalesMonth}\n" +
-                                $"Total sales today : P{totalSalesDay}");
+                string salesReportContent = $"Sales Report\n" +
+                                            $"Date: {currentDate.ToString("MMMM dd, yyyy HH:mm:ss")}\n\n" +
+                                            $"Total sales for year {currentDate.Year}: P{totalSalesYear}\n" +
+                                            $"Total sales for the month of {currentDate.ToString("MMMM")}: P{totalSalesMonth}\n" +
+                                            $"Total sales today: P{totalSalesDay}";
+
+                string reportPath = @"W:\Documents\BSCpE\Soft Dev\Immortals\SalesReport.txt";
+                Directory.CreateDirectory(Path.GetDirectoryName(reportPath));
+                File.WriteAllText(reportPath, salesReportContent);
+
+                var dialogResult = MessageBox.Show($"Sales report generated at {reportPath}.\nDo you want to print it now?",
+                                                   "Sales Report", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (dialogResult == DialogResult.Yes)
+                {
+                    PrintSalesReport(reportPath);
+                }
             }
             catch (Exception ex)
             {
@@ -86,6 +102,33 @@ namespace Immortals
             finally
             {
                 con.Close();
+            }
+        }
+
+        private void PrintSalesReport(string reportPath)
+        {
+            PrintDocument printDoc = new PrintDocument();
+            printDoc.PrintPage += (sender, e) =>
+            {
+                string reportContent = File.ReadAllText(reportPath);
+                e.Graphics.DrawString(reportContent, new Font("Arial", 20), Brushes.Black, new RectangleF(10, 10, e.MarginBounds.Width, e.MarginBounds.Height));
+            };
+
+            try
+            {
+                PrintDialog printDialog = new PrintDialog
+                {
+                    Document = printDoc
+                };
+
+                if (printDialog.ShowDialog() == DialogResult.OK)
+                {
+                    printDoc.Print();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error while printing: " + ex.Message, "Print Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -150,15 +193,57 @@ namespace Immortals
                 int totalRegisteredAccounts = ExecuteScalarIntQuery(queryRegisteredAccounts);
 
                 string queryRegisteredAccountsBalance = "SELECT SUM(userBalance) FROM AccountInformation";
-                TimeSpan totalRegisteredAccountsBalance = TimeSpan.FromSeconds(ExecuteScalarIntQuery(queryRegisteredAccountsBalance));
+                int totalRegisteredAccountsBalance = ExecuteScalarIntQuery(queryRegisteredAccountsBalance);
 
                 string queryGuestAccountsBalance = "SELECT SUM(userBalance) FROM GuestAccount";
-                TimeSpan totalGuestAccountsBalance = TimeSpan.FromSeconds(ExecuteScalarIntQuery(queryGuestAccountsBalance));
+                int totalGuestAccountsBalance = ExecuteScalarIntQuery(queryGuestAccountsBalance);
 
-                MessageBox.Show($"Total Guest Accounts: {totalGuestAccounts}\n" +
-                                $"Total Registered Accounts: {totalRegisteredAccounts}\n" +
-                                $"Total Registered Accounts Unused Balance: {totalRegisteredAccountsBalance.ToString(@"hh\:mm\:ss")}\n" +
-                                $"Total Guest Accounts Unused Balance: {totalGuestAccountsBalance.ToString(@"hh\:mm\:ss")}");
+                string queryTodayEarnings = "SELECT SUM(TopupAmount) FROM TopupHistory WHERE TopupDate = DATE()";
+                int todayEarnings = ExecuteScalarIntQuery(queryTodayEarnings);
+
+                string queryWeeklyEarnings = "SELECT SUM(TopupAmount) FROM TopupHistory WHERE TopupDate >= DATEADD('d', -7, DATE())";
+                int weeklyEarnings = ExecuteScalarIntQuery(queryWeeklyEarnings);
+
+                Chart analyticsChart = new Chart();
+                analyticsChart.Dock = DockStyle.Fill;
+
+                ChartArea accountsArea = new ChartArea("AccountsArea");
+                analyticsChart.ChartAreas.Add(accountsArea);
+
+                ChartArea balancesArea = new ChartArea("BalancesArea");
+                analyticsChart.ChartAreas.Add(balancesArea);
+
+                ChartArea earningsArea = new ChartArea("EarningsArea");
+                analyticsChart.ChartAreas.Add(earningsArea);
+
+                Series accountsSeries = new Series("User Accounts");
+                accountsSeries.ChartType = SeriesChartType.Pie;
+                accountsSeries.Points.AddXY("Guest Accounts", totalGuestAccounts);
+                accountsSeries.Points.AddXY("Registered Accounts", totalRegisteredAccounts);
+                accountsSeries.ChartArea = "AccountsArea";
+                analyticsChart.Series.Add(accountsSeries);
+
+                Series balanceSeries = new Series("Balances");
+                balanceSeries.ChartType = SeriesChartType.Column;
+                balanceSeries.Points.AddXY("Registered Balance", totalRegisteredAccountsBalance);
+                balanceSeries.Points.AddXY("Guest Balance", totalGuestAccountsBalance);
+                balanceSeries.ChartArea = "BalancesArea";
+                analyticsChart.Series.Add(balanceSeries);
+
+                Series earningsSeries = new Series("Earnings");
+                earningsSeries.ChartType = SeriesChartType.Line;
+                earningsSeries.Points.AddXY("Today", todayEarnings);
+                earningsSeries.Points.AddXY("This Week", weeklyEarnings);
+                earningsSeries.ChartArea = "EarningsArea";
+                analyticsChart.Series.Add(earningsSeries);
+
+                Form chartForm = new Form
+                {
+                    Text = "Analytics Dashboard",
+                    Size = new Size(800, 600)
+                };
+                chartForm.Controls.Add(analyticsChart);
+                chartForm.ShowDialog();
             }
             catch (Exception ex)
             {
