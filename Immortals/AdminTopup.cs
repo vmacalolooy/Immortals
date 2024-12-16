@@ -12,17 +12,29 @@ namespace Immortals
         public AdminTopup()
         {
             InitializeComponent();
-            con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb");
+            con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb");
         }
 
         private void submittopupBtn_Click(object sender, EventArgs e)
         {
             string username = usertopupTbx.Text;
-            int amount = Convert.ToInt32(amountTbx.Text);
-            int amountSeconds = amount * 240;
 
             try
             {
+                if (!int.TryParse(amountTbx.Text, out int amount))
+                {
+                    MessageBox.Show("Please enter a valid numeric top-up amount.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                if (amount < 0)
+                {
+                    MessageBox.Show("Top-up amount cannot be negative. Please enter a positive value.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
+
+                int amountSeconds = amount * 240;
+
                 con.Open();
 
                 string updateBalanceQuery = $"UPDATE AccountInformation SET userBalance = userBalance + {amountSeconds} WHERE Username = '{username}'";
@@ -31,28 +43,27 @@ namespace Immortals
 
                 if (rowsUpdated > 0)
                 {
-
                     string insertHistoryQuery = $"INSERT INTO TopupHistory (Username, TopupDate, TopupAmount) VALUES ('{username}', '{DateTime.Now}', {amount})";
                     OleDbCommand insertHistoryCmd = new OleDbCommand(insertHistoryQuery, con);
                     int rowsInserted = insertHistoryCmd.ExecuteNonQuery();
 
                     if (rowsInserted > 0)
                     {
-                        MessageBox.Show("Top-up successful and logged.");
+                        MessageBox.Show("Top-up successful and logged.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     }
                     else
                     {
-                        MessageBox.Show("Failed to log top-up.");
+                        MessageBox.Show("Top-up successful, but logging failed.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Username not found or unable to update balance.");
+                    MessageBox.Show("Username not found or unable to update balance.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Error: " + ex.Message);
+                MessageBox.Show("Error: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             finally
             {

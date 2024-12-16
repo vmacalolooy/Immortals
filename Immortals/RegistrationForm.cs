@@ -20,7 +20,7 @@ namespace Immortals
             InitializeComponent();
         }
 
-        OleDbConnection? con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb");
+        OleDbConnection? con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb");
         OleDbDataAdapter? da;
         OleDbCommand? cmd;
         DataSet? ds;

@@ -20,7 +20,7 @@ namespace Immortals
         {
             try
             {
-                string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb";
+                string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb";
                 string query = "SELECT TopupDate, TopupAmount FROM TopupHistory WHERE Username = @username";
 
                 using (OleDbConnection connection = new OleDbConnection(connectionString))

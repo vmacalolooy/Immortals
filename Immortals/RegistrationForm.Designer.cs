@@ -98,11 +98,11 @@
             // labelSuccess
             // 
             labelSuccess.AutoSize = true;
-            labelSuccess.Font = new Font("Rockwell", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelSuccess.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             labelSuccess.ForeColor = Color.Lime;
             labelSuccess.Location = new Point(198, 82);
             labelSuccess.Name = "labelSuccess";
-            labelSuccess.Size = new Size(175, 17);
+            labelSuccess.Size = new Size(166, 18);
             labelSuccess.TabIndex = 10;
             labelSuccess.Text = "Registration successful.";
             labelSuccess.Visible = false;
@@ -110,11 +110,11 @@
             // labelUserExist
             // 
             labelUserExist.AutoSize = true;
-            labelUserExist.Font = new Font("Rockwell", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            labelUserExist.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             labelUserExist.ForeColor = Color.Red;
             labelUserExist.Location = new Point(163, 83);
             labelUserExist.Name = "labelUserExist";
-            labelUserExist.Size = new Size(336, 17);
+            labelUserExist.Size = new Size(313, 18);
             labelUserExist.TabIndex = 9;
             labelUserExist.Text = "Username already exists please try a new one.";
             labelUserExist.Visible = false;
@@ -122,11 +122,11 @@
             // label71
             // 
             label71.AutoSize = true;
-            label71.Font = new Font("Rockwell", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            label71.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             label71.ForeColor = Color.Red;
             label71.Location = new Point(161, 82);
             label71.Name = "label71";
-            label71.Size = new Size(308, 17);
+            label71.Size = new Size(292, 18);
             label71.TabIndex = 8;
             label71.Text = "Password does not match please try again.";
             label71.Visible = false;
@@ -213,11 +213,11 @@
             // 
             confirmpasswordTbx.BackColor = Color.FromArgb(218, 244, 251);
             confirmpasswordTbx.BorderStyle = BorderStyle.None;
-            confirmpasswordTbx.Font = new Font("Rockwell", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            confirmpasswordTbx.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             confirmpasswordTbx.ForeColor = Color.DimGray;
             confirmpasswordTbx.Location = new Point(3, 10);
             confirmpasswordTbx.Name = "confirmpasswordTbx";
-            confirmpasswordTbx.Size = new Size(219, 18);
+            confirmpasswordTbx.Size = new Size(219, 17);
             confirmpasswordTbx.TabIndex = 1;
             confirmpasswordTbx.Text = "Confirm password";
             confirmpasswordTbx.TextAlign = HorizontalAlignment.Center;
@@ -227,11 +227,11 @@
             // label6
             // 
             label6.AutoSize = true;
-            label6.Font = new Font("Rockwell", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label6.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label6.ForeColor = Color.PaleTurquoise;
             label6.Location = new Point(38, 220);
             label6.Name = "label6";
-            label6.Size = new Size(155, 19);
+            label6.Size = new Size(153, 20);
             label6.TabIndex = 6;
             label6.Text = "Confirm Password";
             // 
@@ -241,7 +241,7 @@
             backtologinBtn.FlatAppearance.BorderSize = 2;
             backtologinBtn.FlatAppearance.MouseOverBackColor = Color.SlateBlue;
             backtologinBtn.FlatStyle = FlatStyle.Flat;
-            backtologinBtn.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            backtologinBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             backtologinBtn.ForeColor = SystemColors.ButtonHighlight;
             backtologinBtn.Location = new Point(170, 339);
             backtologinBtn.Name = "backtologinBtn";
@@ -257,7 +257,7 @@
             registerBtn.FlatAppearance.BorderSize = 2;
             registerBtn.FlatAppearance.MouseOverBackColor = Color.SlateBlue;
             registerBtn.FlatStyle = FlatStyle.Flat;
-            registerBtn.Font = new Font("Rockwell", 12F, FontStyle.Regular, GraphicsUnit.Point);
+            registerBtn.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point);
             registerBtn.ForeColor = SystemColors.ButtonHighlight;
             registerBtn.Location = new Point(170, 296);
             registerBtn.Name = "registerBtn";
@@ -349,11 +349,11 @@
             // 
             newpasswordTbx.BackColor = Color.FromArgb(218, 244, 251);
             newpasswordTbx.BorderStyle = BorderStyle.None;
-            newpasswordTbx.Font = new Font("Rockwell", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            newpasswordTbx.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             newpasswordTbx.ForeColor = Color.DimGray;
             newpasswordTbx.Location = new Point(3, 10);
             newpasswordTbx.Name = "newpasswordTbx";
-            newpasswordTbx.Size = new Size(219, 18);
+            newpasswordTbx.Size = new Size(219, 17);
             newpasswordTbx.TabIndex = 1;
             newpasswordTbx.Text = "Enter password";
             newpasswordTbx.TextAlign = HorizontalAlignment.Center;
@@ -363,11 +363,11 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Rockwell", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label4.ForeColor = Color.PaleTurquoise;
             label4.Location = new Point(111, 161);
             label4.Name = "label4";
-            label4.Size = new Size(84, 19);
+            label4.Size = new Size(86, 20);
             label4.TabIndex = 4;
             label4.Text = "Password";
             // 
@@ -423,11 +423,11 @@
             // 
             newusernameTbx.BackColor = Color.FromArgb(218, 244, 251);
             newusernameTbx.BorderStyle = BorderStyle.None;
-            newusernameTbx.Font = new Font("Rockwell", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
+            newusernameTbx.Font = new Font("Microsoft Sans Serif", 11.25F, FontStyle.Regular, GraphicsUnit.Point);
             newusernameTbx.ForeColor = Color.DimGray;
             newusernameTbx.Location = new Point(0, 5);
             newusernameTbx.Name = "newusernameTbx";
-            newusernameTbx.Size = new Size(219, 18);
+            newusernameTbx.Size = new Size(219, 17);
             newusernameTbx.TabIndex = 1;
             newusernameTbx.Text = "Enter new username";
             newusernameTbx.TextAlign = HorizontalAlignment.Center;
@@ -437,11 +437,11 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Rockwell", 12F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.PaleTurquoise;
             label1.Location = new Point(107, 104);
             label1.Name = "label1";
-            label1.Size = new Size(88, 19);
+            label1.Size = new Size(91, 20);
             label1.TabIndex = 0;
             label1.Text = "Username";
             // 

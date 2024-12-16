@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.OleDb;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,7 +17,7 @@ namespace Immortals
         private int guestID;
         private string username;
         private bool balanceAlertShown = false;
-        private string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb";
+        private string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb";
         private System.Windows.Forms.Timer balanceTimer;
 
         public GamesMenu(int guestID)
@@ -116,22 +117,70 @@ namespace Immortals
 
         private void dotaBtn_Click(object sender, EventArgs e)
         {
-            new Dota().Show();
+            try
+            {
+                string steamPath = @"C:\Program Files (x86)\Steam\Steam.exe";
+
+                if (System.IO.File.Exists(steamPath))
+                {
+                    Process.Start(steamPath, "-applaunch 570");
+                }
+                else
+                {
+                    MessageBox.Show("Steam is not installed or the path is incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void valorantBtn_Click(object sender, EventArgs e)
         {
-            new Valorant().Show();
+            try
+            {
+                string riotClientPath = @"C:\Riot Games\Riot Client\RiotClientServices.exe";
+
+                if (System.IO.File.Exists(riotClientPath))
+                {
+                    Process.Start(riotClientPath, "--launch-product=valorant --launch-patchline=live");
+                }
+                else
+                {
+                    MessageBox.Show("Riot Client is not installed or the path is incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void lolBtn_Click(object sender, EventArgs e)
         {
-
+            new Valorant().Show();
         }
 
         private void csBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string steamPath = @"C:\Program Files (x86)\Steam\Steam.exe";
 
+                if (System.IO.File.Exists(steamPath))
+                {
+                    Process.Start(steamPath, "-applaunch 730");
+                }
+                else
+                {
+                    MessageBox.Show("Steam is not installed or the path is incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void forniteBtn_Click(object sender, EventArgs e)
@@ -141,7 +190,23 @@ namespace Immortals
 
         private void chromeBtn_Click(object sender, EventArgs e)
         {
+            try
+            {
+                string chromePath = @"C:\Program Files\Google\Chrome\Application\chrome.exe";
 
+                if (System.IO.File.Exists(chromePath))
+                {
+                    Process.Start(chromePath);
+                }
+                else
+                {
+                    MessageBox.Show("Google Chrome is not installed or the path is incorrect.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

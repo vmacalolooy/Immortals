@@ -41,7 +41,7 @@ namespace Immortals
         {
             try
             {
-                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb"))
+                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb"))
                 {
                     string updateQuery = "UPDATE LoginHistory SET LogoutDateTime = @logoutDateTime WHERE LogID = @loginID";
 
@@ -74,7 +74,7 @@ namespace Immortals
         {
             try
             {
-                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb"))
+                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb"))
                 {
                     string insertQuery = "INSERT INTO LoginHistory (Username, LoginDateTime) VALUES (@username, @loginDateTime)";
 
@@ -104,7 +104,7 @@ namespace Immortals
         {
             try
             {
-                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb"))
+                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb"))
                 {
                     string insertQuery = "INSERT INTO TopupHistory (Username, TopupDate, TopupAmount) VALUES (@username, @topupDate, @topupAmount)";
 
@@ -169,7 +169,7 @@ namespace Immortals
             try
             {
 
-                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb"))
+                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb"))
                 {
 
                     string updateQuery = "UPDATE AccountInformation SET userBalance = @userBalance WHERE username = @username";
@@ -227,6 +227,11 @@ namespace Immortals
             try
             {
                 amount = int.Parse(usertopupTbx.Text);
+                if(amount < 0)
+                {
+                    MessageBox.Show("Please enter a valid amount.", "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return;
+                }
                 int secondsToAdd = amount * 240;
                 elapsedSeconds += secondsToAdd;
                 successLabel.Visible = false;
@@ -292,7 +297,7 @@ namespace Immortals
 
             try
             {
-                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb"))
+                using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb"))
                 {
                     string checkUsernameQuery = "SELECT COUNT(*) FROM AccountInformation WHERE username = @newUsername AND username <> @oldUsername";
 
@@ -364,7 +369,7 @@ namespace Immortals
             {
                 try
                 {
-                    using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb"))
+                    using (OleDbConnection con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb"))
                     {
                         string deleteQuery = "DELETE FROM AccountInformation WHERE username = @username";
 

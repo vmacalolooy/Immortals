@@ -14,7 +14,7 @@ namespace Immortals
     public partial class GuestDashboard : Form
     {
         private int guestID;
-        private string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\\Users\\Vincent\\Documents\\Immortals.accdb";
+        private string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb";
 
         public GuestDashboard(int guestID)
         {
