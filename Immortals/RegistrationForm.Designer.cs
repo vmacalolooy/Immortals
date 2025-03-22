@@ -223,6 +223,8 @@
             confirmpasswordTbx.TextAlign = HorizontalAlignment.Center;
             confirmpasswordTbx.MouseClick += confirmpasswordTbx_MouseClick;
             confirmpasswordTbx.TextChanged += confirmpasswordTbx_TextChanged;
+            confirmpasswordTbx.Enter += confirmpasswordTbx_Enter;
+            confirmpasswordTbx.Leave += confirmpasswordTbx_Leave;
             // 
             // label6
             // 
@@ -309,6 +311,8 @@
             panel8.Name = "panel8";
             panel8.Size = new Size(230, 31);
             panel8.TabIndex = 2;
+            panel8.Enter += panel8_Enter;
+            panel8.Leave += panel8_Leave;
             // 
             // panel9
             // 
@@ -433,6 +437,8 @@
             newusernameTbx.TextAlign = HorizontalAlignment.Center;
             newusernameTbx.MouseClick += newusernameTbx_MouseClick;
             newusernameTbx.TextChanged += newusernameTbx_TextChanged;
+            newusernameTbx.Enter += newusernameTbx_Enter;
+            newusernameTbx.Leave += newusernameTbx_Leave;
             // 
             // label1
             // 

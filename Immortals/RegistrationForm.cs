@@ -20,7 +20,7 @@ namespace Immortals
             InitializeComponent();
         }
 
-        OleDbConnection? con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals\\Immortals.accdb");
+        OleDbConnection? con = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=W:\\Documents\\BSCpE\\Soft Dev\\Immortals SoftDev2\\Immortals.accdb");
         OleDbDataAdapter? da;
         OleDbCommand? cmd;
         DataSet? ds;
@@ -109,7 +109,7 @@ namespace Immortals
             {
                 if (newusernameTbx.Text == "")
                 {
-                    newusernameTbx.Text = "Enter new username";
+                    //newusernameTbx.Text = "Enter new username";
                     newusernameTbx.ForeColor = Color.DimGray;
                     return;
                 }
@@ -128,7 +128,7 @@ namespace Immortals
             {
                 if (newpasswordTbx.Text == "")
                 {
-                    newpasswordTbx.Text = "Enter password";
+                    //newpasswordTbx.Text = "Enter password";
                     newpasswordTbx.PasswordChar = '\0';
                     button51.BringToFront();
                     newpasswordTbx.ForeColor = Color.DimGray;
@@ -150,7 +150,7 @@ namespace Immortals
             {
                 if (confirmpasswordTbx.Text == "")
                 {
-                    confirmpasswordTbx.Text = "Enter password";
+                    //confirmpasswordTbx.Text = "Enter password";
                     confirmpasswordTbx.PasswordChar = '\0';
                     button52.BringToFront();
                     confirmpasswordTbx.ForeColor = Color.DimGray;
@@ -226,6 +226,72 @@ namespace Immortals
         {
             new Form1().Show();
             this.Hide();
+        }
+
+        private void newusernameTbx_Enter(object sender, EventArgs e)
+        {
+            /*if (newusernameTbx.Text == "Enter new username")
+            {
+                newusernameTbx.Text = "";
+                newusernameTbx.ForeColor = Color.Black;
+            }*/
+            newusernameTbx.Text = "";
+            newusernameTbx.ForeColor = Color.Black;
+        }
+
+        private void newusernameTbx_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(newusernameTbx.Text))
+            {
+                newusernameTbx.Text = "Enter new username";
+                newusernameTbx.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void panel8_Enter(object sender, EventArgs e)
+        {
+            /*if (newpasswordTbx.Text == "Enter password")
+            {
+                newpasswordTbx.Text = "";
+                newpasswordTbx.ForeColor = Color.Black;
+                newpasswordTbx.PasswordChar = '•';
+            }*/
+            newpasswordTbx.Text = "";
+            newpasswordTbx.ForeColor = Color.Black;
+            newpasswordTbx.PasswordChar = '•';
+        }
+
+        private void panel8_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(newpasswordTbx.Text))
+            {
+                newpasswordTbx.Text = "Enter password";
+                newpasswordTbx.PasswordChar = '\0';
+                newpasswordTbx.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void confirmpasswordTbx_Enter(object sender, EventArgs e)
+        {
+            /*if (confirmpasswordTbx.Text == "Confirm password")
+            {
+                confirmpasswordTbx.Text = "";
+                confirmpasswordTbx.ForeColor = Color.Black;
+                confirmpasswordTbx.PasswordChar = '•';
+            }*/
+            confirmpasswordTbx.Text = "";
+            confirmpasswordTbx.ForeColor = Color.Black;
+            confirmpasswordTbx.PasswordChar = '•';
+        }
+
+        private void confirmpasswordTbx_Leave(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(confirmpasswordTbx.Text))
+            {
+                confirmpasswordTbx.Text = "Confirm password";
+                confirmpasswordTbx.PasswordChar = '\0';
+                confirmpasswordTbx.ForeColor = Color.DimGray;
+            }
         }
     }
 }
